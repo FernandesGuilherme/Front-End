@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Estudando JS</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div class="container"> 
+      <h1>CURSO JS</h1>
+   </div>
+
+
+   <script>
+//Todo objeto tem propriedades e metodos
+    var hoje = new Date ();
+    hoje.getDay();//Retorna o dia da semana 
+
+    var x = [0];
+    x.push(8);
+
+    function MudaX (x){
+        console.log(x);
+    }
+    MudaX (10); 
+    console.log(x); 
+    console.log("----------------------");
+///////////////////////////////////////////////////////////////////////////////
+    //Criando um objeto de forma literal
+
+    // Funão externa que altera a cor dos objetos que a chamam;
+    function mudarCor(cor){
+      this.cor = cor;
+    }
+
+    var caneta1 = {
+      cor: 'Blue',
+      mudarCor: mudarCor //passando a função que muda a cor por referencia dentro do objeto;
+    }
+
+    var caneta2 = {
+    cor = 'yelow',
+
+    }
+
+
+
+   </script>
+ 
+  </body>
+</html

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatando nome</title>
+</head>
+<body>
+    <h1>Formatando nomes</h1>
+    <form action="">
+        <input type="text" id="name" name="name" placeholder="Informe seu nome">
+        <input type="submit" value="Enviar" onclick="entradaFormatada()">
+      </form>
+    <p id="nome">Bem vindo, </p>
+
+    <script>
+       
+        function formatar (nome){
+            
+            let posicaoUltimoEspaco = nome.lastIndexOf(' ')
+            
+            if (posicaoUltimoEspaco  <= 0) {
+                 return nome;
+            }
+
+            let ultimoNome = nome.slice(posicaoUltimoEspaco);
+            let primeiroNome = nome.slice(0,posicaoUltimoEspaco);
+            let nomeEntrada = document.getElementById("nome").innerHTML = ultimoNome + ", " + primeiroNome; 
+
+            return nomeEntrada
+        }
+
+        function entradaFormatada(){
+        
+            let inputName = document.getElementById("name").value;    
+            let saidaNome = document.innerHTML =  inputName ; 
+            alert("Bem vindo" + formatar(saidaNome));
+        }
+    </script>
+</body>
+</html>

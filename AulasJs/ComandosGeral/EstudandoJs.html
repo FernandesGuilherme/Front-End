@@ -1,0 +1,62 @@
+<script>
+
+
+//funcao array.pop() -- Remove o ultimo elemento do array  e retorna o valor
+var frutas = ['Banana', 'Uva', 'Pera', 'Laranja'];
+
+var ultimaFruta = frutas.pop(); // Pega somente Laranja  .pop pega a ultima do array
+console.log(frutas); // imprime o array sem a ultima posição
+
+
+//funcao .pus() adiciona um elemento ao array, obrigado receber parametros
+frutas.push('Maionese');
+var adcFruta = frutas.push('manga');
+console.log(frutas);
+
+
+//Função indexOf() -- Descobre se um elemento está dentro de um array, passar o valor procurado como parametro, se verdadeiro retorna possição se falso retorna sempre -1;
+console.log(frutas.indexOf('Maionese')); // Verificando se dentro do array tem 'maionese'
+var posicaoFruta = frutas.indexOf('Maionese');
+
+// Funcao Math.random()
+
+console.log(Math.random()); // Imprime um valor aleatório entre 0 e 1
+console.log(Math.random() * 50); // Imprime um valor aleatório entre 0 e 50
+
+// Função Match.round() -- Arredonda o valor que será gerado dentro do Math.random() * 50;
+Math.round(Math.random() * 50);
+
+//Função Match.min recebe um ou mais numeros de parametros e retornar o menor;
+var precoItubaina = 5.00;
+var precoDolly = 4.00;
+
+Math.min (precoDolly, precoItubaina); 
+
+//Função Match.max recebe um ou mais numeros de parametros e retornar o maior;
+Math.max(precoItubaina, precoDolly);
+
+
+// Funções de String .repet() -- Repete uma String a quantidade de vez que receber por parametro
+
+var azul = 'azul';
+azul.repeat(3) // Retorna AzulAzulAzul;
+
+//.toUpperCase(); transforma a String em MAIUSCULO
+
+console.log(azul);
+console.log(azul.toUpperCase()); // Trasnforma tudo em maíusculo 
+
+//Como que chama uma função e parra um array dentro dela
+// estavaPresenteNaAula (nome, array)
+//estavaPresenteNaAula("Caio", ["Matheus", "Leticia","Caio"]) = true
+
+
+function transformaParaMaiusculo(palavras) {
+    var novo = [];
+    for(var i = 0; i < palavras.length; i++)
+     novo.push(palavras[i].toUpperCase());
+    return novo;
+}
+
+	 
+</script>

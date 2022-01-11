@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Estudando JS</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <div class="container"> 
+      <h1>CURSO JS</h1>
+   </div>
+
+
+   <script>
+//Todo objeto tem propriedades e metodos
+// criando função Caneta e passando preco e cor por referencia
+  function Caneta(preco, cor){
+      var color = cor || 'black';   // Variável cor que recebe a cor que for passada por parametro ou black
+      this.preco = preco || 1;  // prece é a mesma coisas mas usa a palavra this, não é uma variável
+
+    // Função que muda cor
+      this.mudarCor = function(cor){
+          if (cor !== 'red' && cor !== "blue" && cor !== 'green ') { // Verificação
+             return;
+          }
+           color = cor; // Se a cor passar na verificação, a variável corlor recebe a cor informada na função
+         
+        }
+        this.pegarCor = function () { // Função que retorna a cor da cabeta
+            return color;            
+        } 
+
+    }
+    var caneta1 = new Caneta(); // Criando o objeto caneta.
+   </script>
+  </body>
+</html

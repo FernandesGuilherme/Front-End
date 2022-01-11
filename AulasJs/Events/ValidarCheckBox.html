@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar checkbox</title>
+</head>
+<body>
+    <form action="#">
+    <h1>Curso JavaScript completo</h1>  
+
+    <!--readonly transforma o campo em somente leitura -->
+    <textarea style="text-align: justify;" cols="50" rows="10" readonly>
+        Contrato de serviços prestados
+
+        Eu Guilherme Fernandes Lima, venho por intermédio dessa confirmação digital, informo aceitar todos os termos aqui pré estabelecidos.
+    </textarea>
+
+    <br>
+    <label> 
+        <input id = "checkbox" type="checkbox" checked > Li e aceito os termos
+    </label>
+
+<br><br>
+
+        <input id = "btn" type="submit"  value="Enviar">
+    </form>
+
+<script>
+
+    (function(){
+        'use strict'
+        var $btn = document.getElementById("btn");
+        var $checkbox  = document.getElementById("checkbox")
+        //Recebe falso
+        $btn.disabled = !$checkbox.checked; // Desabilito o botao se não estiver checado de inicio
+
+        /*change valida se mudou de estado o evento*/
+        $checkbox.addEventListener("change", validarCheckbox)
+
+        function validarCheckbox (){      
+          if ($checkbox.checked){//Checked Valida se esta prenchido o checkbox
+            $btn.disabled = false
+            }else {
+                $btn.disabled = true
+            } 
+        }
+    })    
+();
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <!-- Div com input-->
+        <input type="text" id="txtNome" value="digite">
+        <button onclick="escreve()">Só clica</button>
+        <!-- Botão que chama a função escreve -->
+        
+        <!--Div que recebe o texto-->
+        <div id="msg"></div>
+        
+        <script>
+            //Atribuição do conteudo da div para a variavel
+            var txtNome2 = document.querySelector('#txtNome');
+            function escreve(){
+                //Pego o valor digitado
+                var nome = txtNome2.value;  
+
+                //E atribuio ao texto                    
+                document.querySelector('#msg').innerHTML = "Bem-vindo, <b>" + nome + "</b>";
+            }
+            
+            
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+            //Função auto executável
+            (function(){
+                function calcularMedia(){                    
+                    
+                    var total = 0;
+                    var qtd = arguments.length; // .length conta os argumentos, ou seja, quantos argumentos tem dentro de qtd
+                    var x = 0;
+                  
+                  //typof verifica o tipo, se os argumentos forém numeros, irão somar
+                    while(typeof arguments[x] === 'number'){
+                        // total recebe o a soma dos argumentos
+                        total += arguments[x];
+                        x++
+                    }                    
+                     //Retorna o total da soma dos argumentos / pela quantidade de argumentos
+                    return total / qtd;
+                }
+                var media1 = calcularMedia(2,3);
+                var media2 = calcularMedia(4, 0, 10, 10);
+                
+                console.log('media1: ', media1)
+                console.log('media2: ', media2)
+            })()
+            
+        </script>
+        
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+      
+    </body>
+</html>

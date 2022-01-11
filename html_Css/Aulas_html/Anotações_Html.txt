@@ -1,0 +1,90 @@
+guithub.com/gustavoguanabara
+
+! -> Já cria a estrutura html
+https://favicon.io/favicon-converter/ -> Criador de ícones de favoritos
+pexel 
+vimeo 
+
+
+
+TAGS HTML:
+<em>Para italico</em>
+<Strong>Para negrito<Strong>
+<code>para deixa o mesmo espaçamento entre os carácteres </code>
+<pre>Quebra de linha e identação</pre>
+<ins>Para sublinhado</ins>
+<small>Texto pequeno</small>
+<mark>Marca texto </mark>
+
+
+Cores: Circulo cromatico
+Duas análogas e uma complementar. No máximo 4 cores
+
+
+Primarias : Amarelo, vermelho e Azul.
+Secundarias: Laranja, Violeta e Verde.
+Terciárias: Misturas das cores primarias (nome: prmeiro primario, depois segundario ex: Amarelo alaranjado)
+
+
+
+
+
+Box model
+		  		 	 _______________Página WEB________________
+				 	| border é a linha que circula o cnoteúdo.|
+height => altura 	|                                         |
+					|	       	   Olá mundo			      | 		
+				 	|_________________________________________| padding largura do conteudo entre borda e conteudo. 
+								width  => Largura
+Todo boxe tem uma margin.
+
+
+
+div ocupa a largura inteira da tela. Uma caixa do lado da outra.
+span é possível colocar umelemento do lado do outro
+
+
+
+
+
+
+
+
+/*
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+Em arquivos .css
+==================================|
+   		   		  |
+.class para <div class = "class"> |
+.class {			  |
+#Formatação			  |
+                                  |
+}				  |
+				  |
+# para <div id = "class">	  |
+				  |	
+#class {			  |
+#Formatação			  |
+				  |
+}			          |
+==================================|
+
+
+
+
+

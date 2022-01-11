@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <script>
+            
+            //literal
+            function somar(n1, n2) {
+                // corpor da funcao
+                return n1 + n2; // retorna soma de dois numeros
+            }
+            
+            var soma = somar(10, 20); // Atribuição da função somar para a variável soma
+            console.log('Resultado: ', soma); // imprime a variável Soma
+            somar.teste = 'propriedade da funcao'; // meio que cria uma variavel .teste para a função somar   
+
+            console.log(somar.teste); // exibe o conteudo de somar.teste
+            
+            var teste = function(f){
+                f();
+            };
+            
+            teste(function(){
+                console.log('funcao passada por parametro');
+            });
+            
+            console.log('------------------');
+            
+            //Escopo global 
+            var x = 0; // Atribuição de valor a "X"
+            var y; // criação de   Y 
+            
+            function mostraX(){
+                 //escopo local, variáveis criadas aqui, só podem ser vistas rentro da função  
+
+                var x = 10; //Atribuição
+                var y = 20; //Atribuição
+                console.log("mostra x dentro: " , x); // impressão
+                console.log("mostra y dentro: " , y); // impressão
+            }
+            mostraX()  // Chamada da função mostraX
+            
+
+            //Improrir X e Y que foram declarados no escopo global
+            console.log("mostra x fora: " , x); 
+            console.log("mostra y fora: " , y);
+            
+            
+            //IIFE - Immediately-invoked function expression
+            (function(){
+
+
+                'use strict'; // limita o uso de variaveis globais
+                var isValid = false;
+                console.log(isValid);
+                
+                function somar(array){
+                    console.log(arguments);
+                    var result = 0;
+                    var x = 0;
+                    
+                    while(arguments[x]){ // enquanto tiver algum argimento ou valor dentro de "X", faça
+                        //result = result + arguments[x];
+                        result += arguments[x]; // soma todos os valores dentro do array
+                        //x = x + 1;
+                        x++; // incrementa X
+                    }
+                    console.log('result: ', result); // imprime o resultado da soma dos valores posto no array
+                }
+                
+                somar(20, 20, 10, 5, 5, 15); // chama a função somar e cria um array atribuindo valores dentro.
+            })(); 

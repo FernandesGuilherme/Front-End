@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar checkbox</title>
+</head>
+<body>
+    <h1>Curso JavaScript completo</h1>  
+
+    <button>Botao 1</button>
+    <button>Botao 2</button>
+    <button>Botao 3</button>
+
+
+<script>
+    (function(){
+
+        /*Pegar todos os botãos por tag*/
+        var $btns = document.getElementsByTagName('button') 
+        var i;
+        for (i = 0; i< $btns.length; i++) { //Conto todos os botões e percorro a lista
+        $btns[i].addEventListener('click', clicou) // Para cada botao eu adiciono uma lista
+        }
+
+        function clicou(){
+            console.log(this.textContent)
+        }
+    })
+();
+
+</script>
+    
+</body>
+</html>

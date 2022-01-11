@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="ptbr">      
+          
+    </head>
+    
+    <body>
+            <h1>Curso Javascript Completo 2018</h1>
+            
+            <form action="#">
+                <label for="txtUser">Usuario</label>
+                <input type="text" id="txtUser" name="user"><br>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass">
+                <br>
+                <button type="button" id="btn">Logar</button>   
+            </form>
+        
+        <script>
+            
+            (function validarAcesso(){
+                'use strict';
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+                
+                $btn.addEventListener('click', function(){                
+                    if($txtUser.value === "" || $txtPass.value === "" ){
+                        alert('Preencha todos os campos');
+                    } else if 
+                        ($txtUser.value === "Lima" && $txtPass.value === "123" ){
+                        alert("Acesso permitido")
+                    } else if
+                         ($txtUser.value != "Lima" || $txtPass.value != "123" ){
+                        alert("Senha e/ou usuário inválido")
+                }
+            });            
+        })()  
+        </script>
+    </body>
+</html>
+    </script>
+</body>
+</html>

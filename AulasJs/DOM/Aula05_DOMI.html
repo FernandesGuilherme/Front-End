@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+    <div id="msg">
+        <h1>teste</h1>
+    </div> 
+        <script>
+            
+            (function(){
+                //Usando prompt para perguntar o nome
+                var nome = prompt('qual seu nome');
+                //Apos ter o nome, selecionar a div pelo id e atribuir a frase junto ao nome na div html
+                document.querySelector('#msg').textContent = "Bem-vindo, " + nome;
+                
+            })()
+            
+        </script>
+        
+    </body>
+</html>

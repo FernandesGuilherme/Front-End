@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+        
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap-theme.css" rel="stylesheet">
+        <script src="beluga.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Curso Javascript Completo 2018</h1>
+        </div>
+        <section>
+        	<div class="container">
+	        
+		      	<h2>Média dos alunos</h2>
+				<table class="table js-tabela">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Nota 1</th>
+							<th>Nota 2</th>
+							<th>Nota 3</th>
+							<th>Nota 4</th>
+							<th>Média</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="aluno" >
+							<td class="aluno-nome">Yasmin</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">9</td>
+							<td class="aluno-n4">7.5</td>	
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Camila</td>
+							<td class="aluno-n1">5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">6.5</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno" >
+							<td class="aluno-nome">Keylla</td>
+							<td class="aluno-n1">8</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">7</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+
+						<tr class="aluno">
+							<td class="aluno-nome">Ketlyn</td>
+							<td class="aluno-n1">6.5</td>
+							<td class="aluno-n2">8.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">7.5</td>
+							<td class="aluno-m"></td>
+						</tr>
+						<tr class="aluno" >
+							<td class="aluno-nome">Maysa</td>
+							<td class="aluno-n1">10</td>
+							<td class="aluno-n2">9.5</td>
+							<td class="aluno-n3">10</td>
+							<td class="aluno-n4">10</td>
+							<td class="aluno-m"></td>
+						</tr>
+					</tbody>
+				</table>
+	        	
+        	</div>	
+        </section>
+        <script>
+            
+            (function(){
+				'use strict'
+				//Acessar o mundo html e a linha completa dos alunos EX: nome  n1 n2 n3 
+			var trs = document.querySelectorAll('.js-tabela tbody .aluno');
+			var x =  0;
+ 
+			//Loop de verificação, enquanto tiver 
+			while (trs[x]){
+				var	linhaAluno = trs[x];
+
+				var tds = linhaAluno.querySelectorAll('td');
+				var notas = recuperarNumerosDeColunas(tds);
+				var media = calcularMedia.apply(this, notas);
+
+				//OUTRAS MANEIRAS DE CHAMAR UMA FUNÇÃO
+				// calcularMedia.call(this, n1, n2); chama e passa os numeros por parametros 
+	 			// calcularMedia.apply(this,[n1, n2]); chama e forma array 
+				linhaAluno.querySelector('.aluno-m').textContent =  media;				
+				x++;
+				}
+				function recuperarNumerosDeColunas(tds){
+					var c = 0;
+					var arr = [];
+					while (tds [c]){
+						if (!isNaN (tds[c].textContent) && tds [c].textContent != ''){// verifica se é possivel converter o que vier da interface em número
+							arr.push(parseFloat(tds[c].textContent)); // meetodo de array, (se for possível) coloca o elemento na próxima posição do array
+						}
+						c++;
+					}
+					return arr;
+				}
+            })()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Estudando JS</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <!--
+        Percorra todos os parágrafos de ima página e altere o conteudo para 
+        "Este site foi hackeado por OfGuilhers "
+    -->
+
+    <div class="container"> 
+      <h1>CURSO JS</h1>
+   </div>
+
+ <p>
+    A vida não é sobre quão duro você é capaz de bater, mas sobre quão duro você é capaz de apanhar e continuar indo em frente.
+ </p>
+
+ <p>
+    A vida não é sobre quão duro você é capaz de bater, mas sobre quão duro você é capaz de apanhar e continuar indo em frente.
+ </p>
+
+ <p>
+    A vida não é sobre quão duro você é capaz de bater, mas sobre quão duro você é capaz de apanhar e continuar indo em frente.
+ </p>
+
+ <p>
+    A vida não é sobre quão duro você é capaz de bater, mas sobre quão duro você é capaz de apanhar e continuar indo em frente.
+ </p>
+
+ <p>
+    A vida não é sobre quão duro você é capaz de bater, mas sobre quão duro você é capaz de apanhar e continuar indo em frente.
+ </p>
+
+ <script>
+ // Sempre que tem coleção de objrtos é necessário fazzer loop
+    (function(){
+   
+   //Aqui pego o conteúdo das tags  <p>
+            var pr = document.querySelectorAll('p');
+            var x = 0;
+//Faço o loop para verificar se existe paragrafp
+            while (pr [x]){
+            pr[x].textContent = 'teste'; // Altero o conteúdo do paragrafo para teste 
+            x ++;
+         }
+   })()
+ </script>
+  </body>
+</html

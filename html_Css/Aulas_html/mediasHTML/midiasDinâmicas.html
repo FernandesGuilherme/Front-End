@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>medias</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <h2>Tente abrir em dispositivos diferentes 
+        ou aumente e diminuie o tamanho da tela</h2>
+
+        <picture>
+            <!--Se o tamanho maximo da tela estiver em 550px eu coloco uma imagem menor-->
+            <source media="(max-width:550px )" srcset="Imagens/foto-p.png" type="image/png">
+            <!--Se o tamanho maximo da tela estiver em 1050px eu coloco uma imagem media, se a tela for maior eu colo a foto grande
+            -->
+            <source media="(max-width:1050px )" srcset="Imagens/foto-m.png" type="image/png">
+            <img src="Imagens/foto-g.png" alt="foto tamanho g">
+        </picture>
+
+        <h1>Usando Audios</h1>
+        <p>Aprendendo a reproduzir audio</p>
+        <!--
+        controls exibe controlador de audio
+        autoplay inicia automaticamente (depede do navegador)
+        -->
+        <audio src = "audioVideo/EuCantando.mp3" controls autoplay></audio>
+        <!-- Esse tipo requer: MP3 WAV OGG -->
+
+
+        <!--OUTRA MANEIRA, verificar tipos no mediatype -->
+        
+        <audio  preload="metadata" controls> 
+            <source src="audioVideo/EuCantando.mp3" type="audio/mpeg">
+        </audio>
+
+        <h1>Colocando videos</h1>
+        <video src="audioVideo/videos/hc.webm" controls width="400px"> </video>
+
+        <!--
+            Para tentar todos os tamanhos
+
+            <video width = "400px"    poster = "caminho"> poster coloca uma capa
+                src = "extensao 1"    na frente do video, tem que ser formato de imagem
+                src = "extesao 2"
+                ..
+                ..
+                scr = "exnesão 5"
+            </video>
+        -->
+
+        <!--Reproduzindo video direto do YouTube, sem consumo de dados do servidor-->
+        <iframe width="400" height="226" src="https://www.youtube.com/embed/FYZ7f2sa2X8"
+         title="YouTube video player" frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+         allowfullscreen>
+        </iframe>
+
+
+        <iframe width="400" height="226" src="https://www.youtube.com/embed/eF9Qoc6p_4Q?start=1"
+         title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+    
+</body>
+</html>

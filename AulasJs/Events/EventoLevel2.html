@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler </title>
+</head>
+
+
+<body>
+    
+    <div class="container">
+        <h1>Curso JavaScript completo</h1>
+        <button id = 'botao'> clique </button>
+    </div>
+
+    <div id = "container">
+        <h1>Propagação de eventos</h1>
+
+        <div id="id1" style="background-color: red; padding: auto;">
+            Textp dentro da div
+            <span style="background-color: seashell;">Texto dentro da Span</span>
+        </div>
+    </div>
+
+
+    <script>
+        /*Acessar dentro do html a tag/elemento do botao e gerar umm evento com uma função*/
+        var bt = document.getElementById("botao");
+        bt.addEventListener("click",
+            function(){
+            alert("Clicou")
+            });
+
+            /* Acessando a div d1 e o elemento Span dentro do html*/
+            var $d1 = document.querySelector('#id1')
+            var $span = document.querySelector('#id1 span')//Tag span está dentro da div 
+            
+            $d1.addEventListener('click', function(e){
+                console.log("Clicou ");
+                e.stopPropagation(); //Evita a propragação do evento para o próximo elemento.
+            }, false);
+
+            $span.addEventListener('click', function(){
+                alert("Propagação faz elementos filhos receberem eventos dos pais." + 
+                " Esse evento é da tag span que está dentro da tag div ")
+            });
+
+            /* Da para mudar a ordem de captura do evento com o parametro ,true
+            se colocar no span, pegarei primeiro o clik da div, ordem ao inverso,
+            Por parametro é false, que pega promeiro o evento do clique, depois propaga
+            para o elemento pai*/
+    </script>
+</body>
+</html>

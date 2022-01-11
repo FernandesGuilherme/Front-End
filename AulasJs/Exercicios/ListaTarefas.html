@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+
+<style>
+    .done{
+        text-decoration: line-through;
+        color: dimgray;
+    }
+   
+</style>
+
+</head>
+<body>
+    <main>
+        <h1>lista de tarefas</h1>
+
+        <input type="text" id = "txtTask">
+        <button id = "btcadastrar">Cadastrar tarefa</button>
+    
+        <ul id = "lista">
+            <li>Estudar JS - DOM</li>
+            <li>Estudar eventos em JS</li>
+            <li>Jogar video-game</li>
+        </ul>
+    </main>
+
+    <script>
+        var $btCadastrar = document.querySelector("#btcadastrar");
+        var $entrada = document.querySelector("#txtTask");
+        var $lista = document.querySelector("#lista");
+        var $lis = $lista.querySelectorAll("li");
+
+        $btCadastrar.addEventListener('click', adicionarNaLista);
+
+        $entrada.addEventListener('keyup', function(e){
+            console.log (e.keyCode) // Cada evento do teclado tem um código númerico ;
+            if (e.keyCode === 13){ // Codigo do "Enter" é 13;
+                adicionarNaLista();
+            }
+        });
+
+        $lista.addEventListener("click", function(e){
+            if(e.target.nodeName === 'LI'){
+                realizado(e.target);
+                removeTask(e.target);
+            }
+        }); 
+        function removeTask(li) {
+            if (confirm("Deseja realmente excluir a tarefa \n " +li.textContent+ "?")){
+                console.log(li.parentNode);
+                li.parentNode.removeChild(li);
+            }
+
+        }
+        function realizado(li){
+            //Adiciona a classe Done a todos ao evento na hora do clique 
+            li.classList.toggle("done");
+        }
+
+        function adicionarNaLista() {
+           var li = document.createElement('li');
+           var text = document.createTextNode($entrada.value);
+          
+           li.appendChild(text); // Pego o valor do texto e coloco dentro da li
+           $lista.appendChild(li);
+           $entrada.value = ""; // Limpo o campo de entrada
+           $entrada.focus();//Coloca o foco (cursor) dentro do input  
+        }
+    </script>  
+</body>
+</html>

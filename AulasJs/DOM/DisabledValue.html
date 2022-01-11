@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Curso Javascript Completo 2018</h1>
+        
+        <!-- Div com campo para digitar-->
+        <input type="text" id="txtNome" value="digite">
+        
+        <script>
+            //Variavel txt recebe conteudo da div
+            var $txt = document.querySelector('txtNome');
+            var nome = "Daniel ";
+            var sobrenome = "Tapias Morales";
+            
+
+            //Inserindo nome e sobrenome no campo da div
+            document.querySelector('#txtNome').value = nome + sobrenome;
+            //Desabilitando escrita 
+            document.querySelector('#txtNome').disabled = true;
+        </script>
+    </body>
+</html>

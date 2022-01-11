@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="utf-8">   
+        
+        <style>
+            span {
+                color: red;
+                text-decoration: underline;
+            }
+        </style>
+
+          
+    </head>
+    
+    <body>
+            <h1>Curso Javascript Completo 2018</h1>
+            <!--cols e rows refere-se ao tamanho da area inicial
+            maxlength define limete máximo de caracter -->
+            <textarea id="msg" cols="50" rows="10" maxlength ="5"></textarea><br>
+            <p id = "paragrafo">Restam <strong><span id="resta" ></span></strong> caracteres a serem preenchido ! </p>
+            
+        <script>
+            
+(function(){
+    'use strict';
+
+    var $txtMsg = document.getElementById('msg');  //Pego toda entrada no elemento msg
+    var $resta = document.getElementById('resta');//Pego toda entrada no elemento resta
+    var maxima = $txtMsg.maxLength; // Atribuo a variável maxima o cunteudo da propriedade  maxLength (100) dentro de txtMsg 
+    var $paragrafoUnico = document.getElementById("paragrafo"); 
+    
+
+    mostrarCaracterFaltantes(maxima);
+    
+    
+   // $txtMsg.addEventListener('keyup', keyup); 
+   // $txtMsg.addEventListener('keydown', keydown);pega toda entrada no campo area depois de gerado o evento
+   // $txtMsg.addEventListener('keypress', keypress) pega toda entrada no campo área pelo teclado
+    
+
+    $txtMsg.addEventListener('input', input); //Gero o evento para txtMsg
+
+
+    function input(){
+
+        /*Atualizo a contagem em tempo real*/
+        var numeroCaracterDigitado = $txtMsg.value.length; //Atribuo a variável todo o document 
+        var cont = parseInt(maxima) - parseInt(numeroCaracterDigitado) ; // Calculo para validar quanto falta (5 - digitados)
+        mostrarCaracterFaltantes(cont); // Passo esse resultado por parametro cna function
+
+        if (cont === 0){
+            $paragrafoUnico.textContent = "Número máximo de carácteres atingido !";
+        }
+    }
+
+    function mostrarCaracterFaltantes (n){
+        $resta.textContent = n; // Retorno para o HTML a quantidade que falta
+        
+
+    }
+})()
+            
+        </script>
+    </body>
+</html>

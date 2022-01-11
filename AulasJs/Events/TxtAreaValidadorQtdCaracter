@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Curso Javascript Completo 2018</title>
+        <meta charset="ptbr">      
+          
+    </head>
+    
+    <body>
+            <h1>Curso Javascript Completo 2018</h1>
+            
+            <form action="#" method="POST">
+                <label for="txtUser">Usuario</label>
+                <input type="text" id="txtUser" name="user"><br>
+                <label for="txtPass">Senha</label>
+                <input type="password" id="txtPass" name="pass">
+                <br>
+                <button type="submit" id="btn">Logar</button>   
+            </form>
+        
+        <script>
+            
+            (function validarAcesso(){
+                'use strict';
+               //Variável para pegar o formulario enviado
+                var $form = document.querySelector("form")
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPass = document.getElementById('txtPass');
+                var $btn = document.getElementById('btn');
+                
+        /*O evento deixa de ser no clique e passa a ser no envio do formulário
+        Estou validadando se ao enviar um formulario as credencias estão de acordo
+        */
+                $form.addEventListener('submit', function(event){                
+                    if($txtUser.value === "" || $txtPass.value === "" ){
+                        alert('Preencha todos os campos');
+                        event.preventDefault(); //Previne o comportamento padrão de envio
+                    } else if 
+                        ($txtUser.value === "Lima" && $txtPass.value === "123" ){
+                        alert("Acesso permitido")
+                    } else if
+                         ($txtUser.value != "Lima" || $txtPass.value != "123" ){
+                        alert("Senha e/ou usuário inválido") 
+                        event.preventDefault(); // Método do objeto evento
+                }
+            });            
+        })()  
+        </script>
+    </body>
+</html>
+    </script>
+</body>
+</html>

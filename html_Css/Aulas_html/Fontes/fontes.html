@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+
+<style>
+/*
+Tags css
+
+font_style: italico ;
+text_decoration: underline;
+font-family: XXX ; 
+font-size Xem;
+font-weight:variação -- tamanho ;
+
+
+shorthand -> Consigo dizer varias coisas em uma linha
+font-style -> font-weight -> font-size -> font-family
+font: italic, bolder, 3em, san-serif   */
+
+/*------------------------------------------------------------------------------*/
+                            /*USANDO FONTES BAIXADAS 
+
+Baixar o Arquivo e colocar na pasta 
+ https://www.dafont.com/pt/love-match.font
+
+Criar regra */
+@font-face {
+    font-family: 'Love';
+    src: url('fontes/LoveMatch.otf') format('opentype'),
+    url('fontes/LoveMatch.ttf') format('truetype'); /*Existe diversos tipo de formato para fontes*/
+    font-weight:normal;
+    font-style: normal;
+}
+/*Chamo a familia da fonte definifa acima*/
+section{
+    font-family: 'Love', 'Times';
+    font-size: 4em;
+}
+/*------------------------------------------------------------------------------*/
+                            /*FONTES POR LINKS EXTERNOS*/
+
+/*https://fonts.google.com/ e selecionar o estilo  (Fonte externa) */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@1&display=swap');
+
+
+                            /*Configuração de fonte externa*/
+h3, h4 {
+        /*Diz respeito a fonte importada no @import -- no site tem essee exemplo pronto*/
+        font-family: 'VT323', monospace;
+
+    }
+    main{
+        font-family: 'Xanh Mono', monospace;
+        font-size: 3em;
+        text-align: center;
+    }
+/*------------------------------------------------------------------------------*/
+                            /* CONFIGURAÇÃO DE FONTE INTERNA*/
+    p{
+        /*saif combiations*/
+        font-family: monospace; /*Pega qualquer fonte monoespaçada, finte genérica*/
+        font-family: sans-serif; /*Pega qualquer fonte sem serif*/
+        font-family: serif; /*Pega qualquer fonte serifada*/
+        font-family: Arial, Helvetica, sans-serif; /* Irá tentar na ordem trasformar o texto em uma das opções */
+        text-align: justify /*Alinha o texto*/;
+    }
+
+    h2{
+        font-family:'Times New Roman', Times, serif;
+    }
+/*------------------------------------------------------------------------------*/
+</style>
+
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime in, 
+        veritatis doloremque nemo voluptatem sequi officia, vitae dolor eaque atque at fugit repellendus vero numquam, similique magnam quod animi?</p>
+    
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam maxime in, 
+        veritatis doloremque nemo voluptatem sequi officia, vitae dolor eaque atque at fugit repellendus vero numquam, similique magnam quod animi?</p>
+
+    <h2>Subtitulo</h2>
+    
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa voluptate assumenda esse vitae architecto aperiam aut.
+         Voluptas expedita dolorem, facere repudiandae doloremque ipsam laboriosam perspiciatis qui corrupti nostrum, doloribus iste!</p>        
+    
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni sequi commodi voluptatibus necessitatibus
+    voluptates modi corporis temporibus quo officia, quia accusamus adipisci eaque aut deleniti aperiam! Itaque aliquid eum velit.</p>
+
+
+    <h3>Fontes com Google Fontes</h3>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio magnam recusandae magni eum. 
+    Ex eveniet nam magni deleniti doloremque consequuntur reprehenderit sapiente quam assumenda, et optio adipisci iusto inventore sint?</h4>
+
+    <main>
+        Outro teste de estilo de fontes do google
+    </main>
+
+
+    <section>
+        Teste de fontes baixadas 
+    </section>
+</body>
+</html> 

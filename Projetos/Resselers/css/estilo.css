@@ -1,0 +1,81 @@
+
+*{margin: 0px; padding: 0px;}
+
+body {
+	background-color:rgb(218, 239, 248);
+	font-family:
+	 arial, helvetica, sans-serif;
+	font-size: 12px;
+
+}
+
+
+.menu{
+	position: absolute;
+	list-style:none;
+	float:left;
+	margin-top: -30px;
+
+}
+
+.menu li{
+	position:relative;
+	float:left;
+	border-right:1px solid #c0c0c0;
+}
+
+.menu li a{
+	color:rgb(255, 255, 255); 
+	text-decoration:none; 
+	padding:5px 10px; 
+	display:block;
+}
+.menu z ul {
+	position:absolute;
+	top:65px;
+	left:30;
+	background-color:#fff;
+	display:none;
+} 
+
+#imagens {
+
+	width: 400px;
+	display: inline-block;
+		
+}
+#todas{
+	margin-top: 5px;
+	text-align: center;
+}
+
+h1{
+	font-family:  Comic Sans;
+	font-size: 40pt;
+	color: rgb(248, 248, 248);
+}
+
+#titulo_pagina{
+	text-align: center;
+	background-color: rgb(118, 163, 236);
+	
+}
+#id{
+	margin-top: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
